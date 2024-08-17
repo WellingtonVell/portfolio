@@ -1,0 +1,7 @@
+# Check formatting and linting before committing
+pre-commit:
+  commands:
+    biome:
+      glob: "*.{js,ts,jsx,tsx}"
+      run: npm run lint {staged_files}
+      stage_fixed: true
