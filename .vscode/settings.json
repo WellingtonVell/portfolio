@@ -6,4 +6,7 @@
     "source.organizeImports": "explicit"
   },
   "tailwindCSS.rootFontSize": 10,
+  "biome.enabled": true,
+  "prettier.enable": false,
+  "eslint.enable": false
 }
