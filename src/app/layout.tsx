@@ -1,5 +1,6 @@
+import { ThemeProvider } from '@/components/theme-provider';
+import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import '../styles/globals.css';
 
 export const metadata: Metadata = {
 	title: 'Portfolio',
@@ -13,7 +14,16 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body>{children}</body>
+			<body>
+				<ThemeProvider
+					attribute='class'
+					defaultTheme='system'
+					enableSystem
+					themes={['light', 'dark']}
+				>
+					{children}
+				</ThemeProvider>
+			</body>
 		</html>
 	);
 }
