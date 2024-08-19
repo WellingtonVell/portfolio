@@ -7,11 +7,13 @@ const theme = plugin(
 			body: {
 				backgroundColor: 'hsl(var(--color-background))',
 				color: 'hsl(var(--color-foreground))',
+				WebkitFontSmoothing: 'antialiased',
+				MozOsxFontSmoothing: 'grayscale',
 			},
 			'input,\ntextarea,\nbutton': { fontFamily: 'inherit' },
 			button: { cursor: 'pointer' },
 			a: { color: 'inherit', textDecoration: 'none' },
-			'ul,\nol,\ndl,\np': { '@apply font-normal text-xs md:text-base': {} },
+			'ul,\nol,\ndl,\np,\na': { '@apply font-normal text-xs md:text-base': {} },
 			'h1,\nh2,\nh3,\nh4,\nh5': { '@apply font-bold': {} },
 			h1: { '@apply text-2xl md:text-4xl': {} },
 			h2: { '@apply text-xl md:text-3xl': {} },
@@ -121,9 +123,13 @@ const theme = plugin(
 						'0%': { transform: 'translateX(0)' },
 						'100%': { transform: 'translateX(calc(-50% - 20px))' },
 					},
+					'spin-reverse': {
+						from: { transform: 'rotate(360deg)' },
+					},
 				},
 				animation: {
 					marquee: 'marquee 15s linear infinite',
+					'spin-reverse': 'spin-reverse 15s linear infinite',
 				},
 				screens: {
 					'2xl': '1440px',
