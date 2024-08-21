@@ -1,4 +1,5 @@
-import { ThemeProvider } from '@/components/theme-provider';
+import Navbar from '@/components/Navbar';
+import { ThemeProvider } from '@/providers/theme-provider';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 
@@ -13,7 +14,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
+		<html lang='en' suppressHydrationWarning>
 			<body>
 				<ThemeProvider
 					attribute='class'
@@ -21,6 +22,8 @@ export default function RootLayout({
 					enableSystem
 					themes={['light', 'dark']}
 				>
+					<Navbar />
+
 					{children}
 				</ThemeProvider>
 			</body>
