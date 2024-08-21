@@ -1,7 +1,7 @@
 import plugin from 'tailwindcss/plugin';
 
 const theme = plugin(
-	({ addBase }) => {
+	({ addBase, addUtilities }) => {
 		addBase({
 			html: { fontSize: '62.5%' },
 			body: {
@@ -20,6 +20,11 @@ const theme = plugin(
 			h3: { '@apply text-lg md:text-2xl': {} },
 			h4: { '@apply text-base md:text-xl': {} },
 			h5: { '@apply text-sm md:text-lg': {} },
+
+			'.hero-ring': {
+				'@apply absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full border-2 border-[#1e40af] dark:border-[#6ee7b7] shadow-[0_0_80px_inset] dark:shadow-[#6ee7b7] shadow-[#1e40af]':
+					{},
+			},
 		});
 
 		addBase({
@@ -113,6 +118,12 @@ const theme = plugin(
 				'--color-chart-5': '340deg 75% 55%',
 			},
 		});
+		addUtilities({
+			'.mask-gradient': {
+				'mask-image':
+					'linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)',
+			},
+		});
 	},
 
 	{
@@ -123,6 +134,17 @@ const theme = plugin(
 						'0%': { transform: 'translateX(0)' },
 						'100%': { transform: 'translateX(calc(-50% - 20px))' },
 					},
+					orbit: {
+						to: {
+							transform: 'rotate(360deg)',
+						},
+					},
+					'orbit-pulse': {
+						'0%': { transform: 'rotate(0deg)', opacity: '1' },
+						'10%': { opacity: '.3' },
+						'90%': { opacity: '.3' },
+						'100%': { transform: 'rotate(360deg)', opacity: '1' },
+					},
 					'spin-reverse': {
 						from: { transform: 'rotate(360deg)' },
 					},
@@ -130,8 +152,11 @@ const theme = plugin(
 				animation: {
 					marquee: 'marquee 15s linear infinite',
 					'spin-reverse': 'spin-reverse 15s linear infinite',
+					orbit: 'orbit 120s linear infinite',
+					'orbit-pulse': 'orbit-pulse 5s linear infinite',
 				},
 				screens: {
+					xs: '380px',
 					'2xl': '1440px',
 					'3xl': '2560px',
 				},
