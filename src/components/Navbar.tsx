@@ -11,7 +11,7 @@ const Links = [
 
 export default function Navbar() {
 	return (
-		<nav className='grid grid-flow-col grid-cols-[1fr_auto_1fr] items-center z-50 top-0 sticky justify-items-center'>
+		<nav className='grid grid-flow-col grid-cols-[auto_1fr_auto] items-center z-50 top-0 sticky justify-items-center px-5'>
 			{/*TODO: Support portuguese and english */}
 			<Button variant='ghost' size='icon' className='m-1'>
 				<LiaFlagUsaSolid size={30} />

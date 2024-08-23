@@ -7,6 +7,6 @@ const config: Config = {
 		'./src/app/**/*.{js,ts,jsx,tsx}',
 	],
 	darkMode: 'class',
-	plugins: [theme],
+	plugins: [theme, require('tailwindcss-animate')],
 };
 export default config;

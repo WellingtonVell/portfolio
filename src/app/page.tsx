@@ -1,11 +1,10 @@
-import Hero from '@/components/Hero';
+import { Hero, Technologies } from '@/components/pages/landing';
 
 export default function Home() {
 	return (
-		<main className='min-h-dvh px-5'>
-			<section className='h-screen'>
-				<Hero />
-			</section>
+		<main className='min-h-dvh px-20'>
+			<Hero />
+			<Technologies />
 		</main>
 	);
 }
