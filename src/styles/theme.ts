@@ -130,9 +130,13 @@ const theme = plugin(
 		theme: {
 			extend: {
 				keyframes: {
-					marquee: {
+					technologies: {
 						'0%': { transform: 'translateX(0)' },
 						'100%': { transform: 'translateX(calc(-50% - 20px))' },
+					},
+					tape: {
+						'0%': { transform: 'translateX(0)' },
+						'100%': { transform: 'translateX(calc(-50% - 1190px))' },
 					},
 					orbit: {
 						to: {
@@ -150,7 +154,8 @@ const theme = plugin(
 					},
 				},
 				animation: {
-					marquee: 'marquee 15s linear infinite',
+					technologies: 'technologies 15s linear infinite',
+					tape: 'tape 15s linear infinite',
 					'spin-reverse': 'spin-reverse 15s linear infinite',
 					orbit: 'orbit 120s linear infinite',
 					'orbit-pulse': 'orbit-pulse 5s linear infinite',
