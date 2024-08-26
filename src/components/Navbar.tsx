@@ -2,16 +2,9 @@ import { LiaFlagUsaSolid } from 'react-icons/lia';
 import { ModeToggle } from './mode-toggle';
 import { Button } from './ui/Button';
 
-const Links = [
-	{ name: 'Home', href: '#' },
-	{ name: 'Projects', href: '#' },
-	{ name: 'About', href: '#' },
-	{ name: 'Contact', href: '#' },
-];
-
 export default function Navbar() {
 	return (
-		<nav className='grid grid-flow-col grid-cols-[auto_1fr_auto] items-center z-50 top-0 sticky justify-items-center px-5'>
+		<nav className='grid grid-flow-col grid-cols-[auto_1fr_auto] items-center z-50 top-0 sticky justify-items-center px-5 bg-background/20 backdrop-blur-sm'>
 			{/*TODO: Support portuguese and english */}
 			<Button variant='ghost' size='icon' className='m-1'>
 				<LiaFlagUsaSolid size={30} />
@@ -31,3 +24,10 @@ export default function Navbar() {
 		</nav>
 	);
 }
+
+const Links = [
+	{ name: 'Home', href: '#' },
+	{ name: 'Projects', href: '#' },
+	{ name: 'About', href: '#' },
+	{ name: 'Contact', href: '#' },
+];

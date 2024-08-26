@@ -136,7 +136,7 @@ const theme = plugin(
 					},
 					tape: {
 						'0%': { transform: 'translateX(0)' },
-						'100%': { transform: 'translateX(calc(-50% - 1190px))' },
+						'100%': { transform: 'translateX(calc(-91% - -44px))' },
 					},
 					orbit: {
 						to: {

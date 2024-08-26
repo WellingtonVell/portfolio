@@ -55,14 +55,14 @@ const orbitItems: OrbitItem[] = [
 		icon: PiStarFourFill,
 		rotation: 300,
 		className:
-			'text-[#1e40af] animate-orbit-pulse [animation-duration:70s] size-12',
+			'text-[#1e40af] motion-safe:animate-orbit-pulse motion-safe:[animation-duration:70s] size-12',
 	},
 	{
 		size: 550,
 		position: 20,
 		icon: PiStarFourFill,
 		className:
-			'text-[#1e40af] size-12 animate-orbit-pulse [animation-duration:50s] [animation-delay:6s]',
+			'text-[#1e40af] size-12 motion-safe:animate-orbit-pulse motion-safe:[animation-duration:50s] motion-safe:[animation-delay:6s]',
 		rotation: 250,
 	},
 	{
@@ -70,7 +70,7 @@ const orbitItems: OrbitItem[] = [
 		position: 98,
 		icon: PiStarFourFill,
 		className:
-			'text-[#1e40af] size-12 animate-orbit-pulse [animation-duration:50s] [animation-delay:8s]',
+			'text-[#1e40af] size-12 motion-safe:animate-orbit-pulse motion-safe:[animation-duration:50s] motion-safe:[animation-delay:8s]',
 		rotation: 160,
 	},
 	{
@@ -78,7 +78,7 @@ const orbitItems: OrbitItem[] = [
 		position: -14,
 		icon: HiSparkles,
 		className:
-			'text-[#1e40af] size-12 animate-orbit-pulse [animation-duration:60s] -z-10',
+			'text-[#1e40af] size-12 motion-safe:animate-orbit-pulse motion-safe:[animation-duration:60s] -z-10',
 		rotation: 120,
 	},
 	{
@@ -86,7 +86,7 @@ const orbitItems: OrbitItem[] = [
 		position: 79,
 		icon: HiSparkles,
 		className:
-			'text-[#1e40af] size-5 animate-orbit-pulse [animation-duration:70s]',
+			'text-[#1e40af] size-5 motion-safe:animate-orbit-pulse motion-safe:[animation-duration:70s]',
 		rotation: 140,
 	},
 	{
@@ -94,7 +94,7 @@ const orbitItems: OrbitItem[] = [
 		position: 178,
 		icon: HiSparkles,
 		className:
-			'text-[#1e40af] size-10 animate-orbit-pulse [animation-duration:60s]',
+			'text-[#1e40af] size-10 motion-safe:animate-orbit-pulse motion-safe:[animation-duration:60s]',
 		rotation: 170,
 	},
 	{
@@ -102,14 +102,15 @@ const orbitItems: OrbitItem[] = [
 		position: 144,
 		icon: HiSparkles,
 		className:
-			'text-[#1e40af] size-14 animate-orbit-pulse [animation-duration:80s]',
+			'text-[#1e40af] size-14 motion-safe:animate-orbit-pulse motion-safe:[animation-duration:80s]',
 		rotation: 200,
 	},
 	{
 		size: 720,
 		position: 85,
 		icon: BsCircleFill,
-		className: 'text-[#1e40af] size-3 animate-pulse [animation-duration:15s]',
+		className:
+			'text-[#1e40af] size-3 motion-safe:animate-pulse motion-safe:[animation-duration:15s]',
 		rotation: 120,
 	},
 	{
@@ -117,7 +118,7 @@ const orbitItems: OrbitItem[] = [
 		position: -41,
 		icon: BsCircleFill,
 		className:
-			'text-[#1e40af] size-2 animate-pulse [animation-duration:15s] [animation-delay:3s]',
+			'text-[#1e40af] size-2 motion-safe:animate-pulse motion-safe:[animation-duration:15s] motion-safe:[animation-delay:3s]',
 		rotation: 160,
 	},
 	{
@@ -125,7 +126,7 @@ const orbitItems: OrbitItem[] = [
 		position: -5,
 		icon: BsCircleFill,
 		className:
-			'text-[#1e40af] size-2 animate-pulse [animation-duration:15s] [animation-delay:5s]',
+			'text-[#1e40af] size-2 motion-safe:animate-pulse motion-safe:[animation-duration:15s] motion-safe:[animation-delay:5s]',
 		rotation: 90,
 	},
 ];

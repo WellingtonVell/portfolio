@@ -21,7 +21,7 @@ export default function Hero() {
 						/>
 
 						<div className='grid grid-flow-col grid-cols-[auto_1fr] items-center gap-2 bg-muted p-2 rounded-xl pointer-events-none'>
-							<span className='bg-success size-2.5 rounded-full animate-pulse' />
+							<span className='bg-success size-2.5 rounded-full motion-safe:animate-pulse' />
 							<p>Available for new projects</p>
 						</div>
 					</div>

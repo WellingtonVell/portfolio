@@ -12,7 +12,7 @@ import { SiExpress, SiJavascript, SiMongodb, SiNestjs, SiNextdotjs, SiPrisma, Si
 export default function Technologies() {
 	return (
 		<div className='w-auto overflow-hidden py-4 mb-20 outline -outline-offset-1 outline-foreground/50 [mask-image:radial-gradient(circle,#000_1%,transparent_100%)] -rotate-1'>
-			<ul className='grid grid-flow-col gap-10 w-fit animate-marquee [animation-duration:45s]'>
+			<ul className='grid grid-flow-col gap-10 w-fit motion-safe:animate-technologies motion-safe:[animation-duration:45s]'>
 				{[...technologies, ...technologies].map(technology => (
 					<Card
 						className='grid grid-flow-row border-0 place-items-center gap-1 shadow-none bg-opacity-0'
