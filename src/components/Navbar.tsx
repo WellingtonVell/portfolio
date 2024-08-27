@@ -1,5 +1,5 @@
 import { LiaFlagUsaSolid } from 'react-icons/lia';
-import { ModeToggle } from './mode-toggle';
+import { SwitchTheme } from '.';
 import { Button } from './ui/Button';
 
 export default function Navbar() {
@@ -20,7 +20,7 @@ export default function Navbar() {
 					</a>
 				))}
 			</div>
-			<ModeToggle />
+			<SwitchTheme />
 		</nav>
 	);
 }

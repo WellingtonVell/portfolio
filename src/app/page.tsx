@@ -7,7 +7,6 @@ export default function Home() {
 			<Projects />
 			<Tape />
 			<Technologies />
-			<div className='min-h-screen' />
 		</main>
 	);
 }

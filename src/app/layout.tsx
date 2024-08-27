@@ -1,5 +1,5 @@
-import Navbar from '@/components/Navbar';
-import { ThemeProvider } from '@/providers/theme-provider';
+import { Footer, Navbar } from '@/components';
+import { Providers } from '@/providers';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 
@@ -16,16 +16,12 @@ export default function RootLayout({
 	return (
 		<html lang='en' suppressHydrationWarning>
 			<body>
-				<ThemeProvider
-					attribute='class'
-					defaultTheme='system'
-					enableSystem
-					themes={['light', 'dark']}
-				>
+				<Providers>
 					<Navbar />
 
 					{children}
-				</ThemeProvider>
+					<Footer />
+				</Providers>
 			</body>
 		</html>
 	);
