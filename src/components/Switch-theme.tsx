@@ -34,8 +34,8 @@ export const SwitchTheme = () => {
 				onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
 				className={`absolute inset-y-[.15rem] flex size-7 items-center justify-center rounded-full bg-white/45 shadow-md transition-all duration-300 ${
 					theme === 'light'
-						? 'translate-x-[3.5rem] text-[#00f]'
-						: 'translate-x-[.1rem] text-[#ff2]'
+						? 'translate-x-[3.5rem] text-info'
+						: 'translate-x-[.1rem] text-warning'
 				}`}
 			>
 				{theme === 'light' ? (

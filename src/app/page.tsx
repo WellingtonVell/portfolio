@@ -1,4 +1,4 @@
-import { Hero, Projects, Tape, Technologies } from '@/components/pages/landing';
+import { Contact, Hero, Projects, Tape } from '@/components/pages/landing';
 
 export default function Home() {
 	return (
@@ -6,7 +6,7 @@ export default function Home() {
 			<Hero />
 			<Projects />
 			<Tape />
-			<Technologies />
+			<Contact />
 		</main>
 	);
 }
