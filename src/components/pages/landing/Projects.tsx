@@ -1,14 +1,8 @@
-import grain from '@/../public/grain.jpg';
+// biome-ignore format: Single line import
+import { FcMultipleSmartphones, GiLockedDoor, Grain, MdIntegrationInstructions, MdOutlineDeveloperMode, RxArrowTopLeft, Template } from '@/../public';
 import { Button } from '@/components/ui/Button';
 import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
-import type { PropsWithChildren } from 'react';
-import { FcMultipleSmartphones } from 'react-icons/fc';
-import { GiLockedDoor } from 'react-icons/gi';
-// biome-ignore format: Single line import
-import { MdIntegrationInstructions, MdOutlineDeveloperMode } from 'react-icons/md';
-import { RxArrowTopLeft } from 'react-icons/rx';
-import Template from '../../../../public/template.png';
 
 const Projects = () => {
 	return (
@@ -25,52 +19,55 @@ const Projects = () => {
 					See how i transform concepts into engaging digital experiences
 				</h5>
 				<div className='my-10 grid grid-flow-row gap-20 w-full justify-items-center'>
-					{projects.map(project => (
-						<div
-							key={project.title}
-							className={`bg-muted relative z-0 pt-4 px-8 rounded-2xl lg:px-20 lg:pt-16 lg:max-w-[1200px] after:content-[''] after:absolute after:inset-0 after:-z-10 overflow-hidden after:outline-2 after:outline after:-outline-offset-2 after:outline-foreground/20 after:rounded-2xl`}
-						>
-							<span
-								className='absolute inset-0 opacity-5 -z-50'
-								style={{ backgroundImage: `url(${grain.src})` }}
-							/>
-							<div className='lg:grid lg:grid-cols-2 lg:gap-16'>
-								<div className='lg:pb-16'>
-									<div className='bg-gradient-to-r from-primary to bg-chart2 inline-flex font-bold tracking-widest text-sm text-[#00000000] bg-clip-text justify-between p-2 space-x-5 uppercase'>
-										<span>{project.company}</span>
-										<span>&bull;</span>
-										<span>{project.year}</span>
+					{[...projects, ...projects, ...projects, ...projects].map(
+						(project, index) => (
+							<div
+								key={project.title}
+								className={`bg-muted z-0 pt-4 px-8 rounded-2xl lg:px-20 lg:pt-16 lg:max-w-[1200px] after:content-[''] after:absolute after:inset-0 after:-z-10 overflow-hidden after:outline-2 after:outline after:-outline-offset-2 after:outline-foreground/20 after:rounded-2xl sticky`}
+								style={{ top: `calc(8rem + ${index * 1}rem)` }}
+							>
+								<span
+									className='absolute inset-0 opacity-5 -z-50'
+									style={{ backgroundImage: `url(${Grain.src})` }}
+								/>
+								<div className='lg:grid lg:grid-cols-2 lg:gap-16'>
+									<div className='lg:pb-16'>
+										<div className='bg-gradient-to-r from-primary to bg-chart2 inline-flex font-bold tracking-widest text-sm text-[#00000000] bg-clip-text justify-between p-2 space-x-5 uppercase'>
+											<span>{project.company}</span>
+											<span>&bull;</span>
+											<span>{project.year}</span>
+										</div>
+										<h1 className='font-serif'>{project.title}</h1>
+										<hr className='my-2 text-foreground/20' />
+										<ul className='my-2 grid grid-flow-row gap-4'>
+											{project.results.map(result => (
+												<li
+													key={result.title}
+													className='grid grid-flow-col place-items-start items-center justify-start gap-3.5 mx-1 text-foreground/60'
+												>
+													<result.icon className='size-4 lg:size-8' />{' '}
+													{result.title}
+												</li>
+											))}
+										</ul>
+										<Link href={project.link}>
+											<Button className='gap-2 w-full md:w-fit rounded-xl z-10 my-4'>
+												View Project
+												<RxArrowTopLeft className='size-4 rotate-90' />
+											</Button>
+										</Link>
 									</div>
-									<h1 className='font-serif'>{project.title}</h1>
-									<hr className='my-2 text-foreground/20' />
-									<ul className='my-2 grid grid-flow-row gap-4'>
-										{project.results.map(result => (
-											<li
-												key={result.title}
-												className='grid grid-flow-col place-items-start items-center justify-start gap-3.5 mx-1 text-foreground/60'
-											>
-												<result.icon className='size-4 lg:size-8' />{' '}
-												{result.title}
-											</li>
-										))}
-									</ul>
-									<Link href={project.link}>
-										<Button className='gap-2 w-full md:w-fit rounded-xl z-10 my-4'>
-											View Project
-											<RxArrowTopLeft className='size-4 rotate-90' />
-										</Button>
-									</Link>
-								</div>
-								<div className='relative'>
-									<Image
-										src={project.image}
-										alt={project.title}
-										className='-mb-8 mx-auto md:-mb-0 lg:absolute lg:h-full lg:ml-auto -z-10 lg:w-auto lg:max-w-none'
-									/>
+									<div className='relative'>
+										<Image
+											src={project.image}
+											alt={project.title}
+											className='-mb-8 mx-auto md:-mb-0 lg:absolute lg:h-full lg:ml-auto -z-10 lg:w-auto lg:max-w-none'
+										/>
+									</div>
 								</div>
 							</div>
-						</div>
-					))}
+						),
+					)}
 				</div>
 			</div>
 		</section>
@@ -91,7 +88,7 @@ type Project = {
 	image: StaticImageData;
 };
 
-const projects: PropsWithChildren<Project>[] = [
+const projects: Project[] = [
 	{
 		year: 2024,
 		title: 'Full Stack Development',
@@ -108,7 +105,6 @@ const projects: PropsWithChildren<Project>[] = [
 			},
 			{
 				icon: FcMultipleSmartphones,
-
 				title:
 					'Creating responsive and intuitive user interfaces in collaboration with UX/UI designers',
 			},

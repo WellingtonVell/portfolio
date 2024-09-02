@@ -1,4 +1,4 @@
-import { BiChevronRight } from '@/../public/icons';
+import { BiChevronRight } from '@/../public';
 import { cn } from '@/lib/utils';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import React from 'react';

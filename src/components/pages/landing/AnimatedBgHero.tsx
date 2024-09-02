@@ -1,5 +1,5 @@
-import grain from '@/../public/grain.jpg';
-import { BsCircleFill, HiSparkles, PiStarFourFill } from '@/../public/icons';
+// biome-ignore format: Single line import
+import { BsCircleFill, Grain, HiSparkles, PiStarFourFill } from '@/../public';
 import Orbit from './Orbit';
 
 const AnimatedBgHero = () => {
@@ -10,7 +10,7 @@ const AnimatedBgHero = () => {
 		>
 			<span
 				className='absolute inset-0 opacity-[5%]'
-				style={{ backgroundImage: `url(${grain.src})` }}
+				style={{ backgroundImage: `url(${Grain.src})` }}
 			/>
 
 			<div className='absolute inset-0 overflow-x-clip'>

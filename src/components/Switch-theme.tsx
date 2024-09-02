@@ -1,6 +1,6 @@
 'use client';
 
-import { BiMoon, CgSun } from '@/../public/icons';
+import { BiMoon, CgSun } from '@/../public';
 import { Button } from '@/components/ui/Button';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';

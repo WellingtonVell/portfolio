@@ -1,4 +1,4 @@
-import { PiStarFourFill } from '@/../public/icons';
+import { PiStarFourFill } from '@/../public';
 
 const Tape = () => {
 	return (

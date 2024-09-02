@@ -1,4 +1,4 @@
-import { BsGithub, BsLinkedin, SiGmail } from '@/../public/icons';
+import { BsGithub, BsLinkedin, SiGmail } from '@/../public';
 import { Button } from '@/components/ui/Button';
 // biome-ignore format: Single line import
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';

@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 
-import { MdCheckCircleOutline } from '@/../public/icons';
+import { MdCheckCircleOutline } from '@/../public';
 import React from 'react';
 
 const DropdownMenuCheckboxItem = React.forwardRef<

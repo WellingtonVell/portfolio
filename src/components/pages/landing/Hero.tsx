@@ -1,5 +1,4 @@
-import hero from '@/../public/hero-computer.png';
-import { BiArrowToBottom, BiPhoneCall } from '@/../public/icons';
+import { BiArrowToBottom, BiPhoneCall, HeroComputer } from '@/../public';
 import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
 import { AnimatedBgHero } from '.';
@@ -12,7 +11,7 @@ export default function Hero() {
 					<AnimatedBgHero />
 					<div className='grid grid-flow-row place-items-center z-0'>
 						<Image
-							src={hero}
+							src={HeroComputer}
 							alt='Hero'
 							priority
 							quality={100}
