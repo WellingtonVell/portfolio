@@ -1,7 +1,7 @@
+import { BiChevronRight } from '@/../public/icons';
 import { cn } from '@/lib/utils';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import React from 'react';
-import { BiChevronRight } from 'react-icons/bi';
 
 const DropdownMenuSubTrigger = React.forwardRef<
 	React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>,

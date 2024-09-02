@@ -1,4 +1,4 @@
-import { PiStarFourFill } from 'react-icons/pi';
+import { PiStarFourFill } from '@/../public/icons';
 
 const Tape = () => {
 	return (

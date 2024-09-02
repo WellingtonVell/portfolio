@@ -1,4 +1,4 @@
-import { LiaFlagUsaSolid } from 'react-icons/lia';
+import { LiaFlagUsaSolid } from '@/../public/icons';
 import { SwitchTheme } from '.';
 import { Button } from './ui/Button';
 

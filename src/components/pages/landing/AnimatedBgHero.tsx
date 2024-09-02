@@ -1,7 +1,5 @@
 import grain from '@/../public/grain.jpg';
-import { BsCircleFill } from 'react-icons/bs';
-import { HiSparkles } from 'react-icons/hi';
-import { PiStarFourFill } from 'react-icons/pi';
+import { BsCircleFill, HiSparkles, PiStarFourFill } from '@/../public/icons';
 import Orbit from './Orbit';
 
 const AnimatedBgHero = () => {

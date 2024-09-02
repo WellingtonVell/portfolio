@@ -1,14 +1,8 @@
+import { BsGithub, BsLinkedin, SiGmail } from '@/../public/icons';
 import { Button } from '@/components/ui/Button';
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from '@/components/ui/Card';
+// biome-ignore format: Single line import
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import Link from 'next/link';
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
-import { SiGmail } from 'react-icons/si';
 
 const Contact = () => {
 	return (

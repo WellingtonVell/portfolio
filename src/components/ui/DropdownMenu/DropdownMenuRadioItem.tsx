@@ -1,7 +1,7 @@
+import { BsDot } from '@/../public/icons';
 import { cn } from '@/lib/utils';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import React from 'react';
-import { BsDot } from 'react-icons/bs';
 
 const DropdownMenuRadioItem = React.forwardRef<
 	React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,

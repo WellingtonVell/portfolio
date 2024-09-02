@@ -1,7 +1,7 @@
 import hero from '@/../public/hero-computer.png';
+import { BiArrowToBottom, BiPhoneCall } from '@/../public/icons';
 import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
-import { BiArrowToBottom, BiPhoneCall } from 'react-icons/bi';
 import { AnimatedBgHero } from '.';
 
 export default function Hero() {

@@ -1,10 +1,9 @@
 'use client';
 
+import { BiMoon, CgSun } from '@/../public/icons';
 import { Button } from '@/components/ui/Button';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
-import { BiMoon } from 'react-icons/bi';
-import { CgSun } from 'react-icons/cg';
 
 export const SwitchTheme = () => {
 	const { setTheme, theme } = useTheme();
