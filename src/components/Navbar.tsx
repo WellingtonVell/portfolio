@@ -1,4 +1,4 @@
-import { LiaFlagUsaSolid } from '@/../public/icons';
+import { LiaFlagUsaSolid } from '@/../public';
 import { SwitchTheme } from '.';
 import { Button } from './ui/Button';
 

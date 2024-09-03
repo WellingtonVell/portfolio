@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BsArrowLeft } from 'react-icons/bs';
+import { BsArrowLeft } from '../../public';
 import { Button } from './ui/Button';
 
 const Footer = () => {

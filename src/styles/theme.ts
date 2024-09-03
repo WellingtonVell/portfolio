@@ -41,14 +41,14 @@ const theme = plugin(
 				'--color-primary': '262deg 83% 58%',
 				'--color-primary-foreground': '210deg 20% 98%',
 
-				'--color-secondary': '220deg 14% 96%',
-				'--color-secondary-foreground': '221deg 39% 11%',
+				'--color-secondary': '56deg 93% 59%',
+				'--color-secondary-foreground': '60deg 50% 17%',
 
 				'--color-muted': '220deg 14% 95%',
 				'--color-muted-foreground': '220deg 9% 46%',
 
-				'--color-accent': '220deg 14% 96%',
-				'--color-accent-foreground': '221deg 39% 11%',
+				'--color-accent': '24deg 95% 53%',
+				'--color-accent-foreground': '24deg 10% 10%',
 
 				'--color-success': '142deg 71% 51%',
 				'--color-success-foreground': '141deg 78% 12%',
@@ -86,13 +86,13 @@ const theme = plugin(
 				'--color-primary': '263deg 70% 50%',
 				'--color-primary-foreground': '210deg 20% 98%',
 
-				'--color-secondary': '215deg 28% 17%',
-				'--color-secondary-foreground': '210deg 20% 98%',
+				'--color-secondary': '56deg 93% 59%',
+				'--color-secondary-foreground': '60deg 50% 17%',
 
 				'--color-muted': '215deg 28% 17%',
 				'--color-muted-foreground': '218deg 11% 65%',
 
-				'--color-accent': '215deg 28% 17%',
+				'--color-accent': '24deg 95% 53%',
 				'--color-accent-foreground': '210deg 20% 98%',
 
 				'--color-success': '142deg 71% 51%',
@@ -134,9 +134,13 @@ const theme = plugin(
 						'0%': { transform: 'translateX(0)' },
 						'100%': { transform: 'translateX(calc(-50% - 20px))' },
 					},
+					'technologies-reverse': {
+						'0%': { transform: 'translateX(calc(-50% - 20px))' },
+						'100%': { transform: 'translateX(0)' },
+					},
 					tape: {
 						'0%': { transform: 'translateX(0)' },
-						'100%': { transform: 'translateX(calc(-91% - -44px))' },
+						'100%': { transform: 'translateX(calc(-50%))' },
 					},
 					orbit: {
 						to: {
@@ -154,7 +158,8 @@ const theme = plugin(
 					},
 				},
 				animation: {
-					technologies: 'technologies 15s linear infinite',
+					technologies: 'technologies 60s linear infinite',
+					'technologies-reverse': 'technologies-reverse 60s linear infinite',
 					tape: 'tape 15s linear infinite',
 					'spin-reverse': 'spin-reverse 15s linear infinite',
 					orbit: 'orbit 120s linear infinite',

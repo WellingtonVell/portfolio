@@ -1,30 +1,25 @@
-import { Card, CardDescription } from '@/components/ui/Card';
-import { BiLogoHtml5, BiLogoPostgresql } from 'react-icons/bi';
-import { BsGithub } from 'react-icons/bs';
-import { DiMysql } from 'react-icons/di';
-import { FaDocker, FaFigma, FaNodeJs, FaReact } from 'react-icons/fa';
-import { FaGolang } from 'react-icons/fa6';
-import { IoLogoCss3 } from 'react-icons/io';
-import { RiTailwindCssFill } from 'react-icons/ri';
 // biome-ignore format: Single line import
-import { SiExpress, SiJavascript, SiMongodb, SiNestjs, SiNextdotjs, SiPrisma, SiTypescript } from 'react-icons/si';
+import { BiLogoHtml5, BiLogoPostgresql, BsGithub, DiMysql, FaDocker, FaFigma, FaGolang, FaNodeJs, FaReact, IoLogoCss3, RiTailwindCssFill, SiExpress, SiJavascript, SiMongodb, SiNestjs, SiNextdotjs, SiPrisma, SiTypescript } from '@/../public';
 
-export default function Technologies() {
+export default function Technologies({ reverse = false }) {
 	return (
-		<div className='w-auto overflow-hidden py-4 mb-20 outline -outline-offset-1 outline-foreground/50 [mask-image:radial-gradient(circle,#000_1%,transparent_100%)] -rotate-1'>
-			<ul className='grid grid-flow-col gap-10 w-fit motion-safe:animate-technologies motion-safe:[animation-duration:45s]'>
-				{[...technologies, ...technologies].map(technology => (
-					<Card
-						className='grid grid-flow-row border-0 place-items-center gap-1 shadow-none bg-opacity-0'
-						key={technology.title}
+		<div className='w-auto overflow-hidden py-4 [mask-image:radial-gradient(circle,#000_1%,transparent_100%)]'>
+			<ul
+				className={`grid grid-flow-col gap-10 w-fit motion-reduce:animate-none hover:[animation-play-state:paused] ${reverse ? 'animate-technologies-reverse' : 'animate-technologies'}`}
+			>
+				{[
+					...(reverse ? [...technologies].reverse() : technologies),
+					...(reverse ? [...technologies].reverse() : technologies),
+				].map((technology, index) => (
+					<li
+						className='grid grid-flow-row place-items-center gap-1 shadow-none bg-opacity-0'
+						key={`${technology.title}+${index}`}
 					>
 						<technology.Icon
 							className={`size-12 xl:size-20 3xl:size-44 ${getIconColor(technology.title)}`}
 						/>
-						<CardDescription className='pointer-events-none'>
-							{technology.title}
-						</CardDescription>
-					</Card>
+						<p className='pointer-events-none'>{technology.title}</p>
+					</li>
 				))}
 			</ul>
 		</div>

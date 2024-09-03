@@ -8,11 +8,9 @@ const Contact = () => {
 	return (
 		<section className='w-full py-12 px-4'>
 			<Card className='max-w-6xl mx-auto bg-transparent border-none shadow-none'>
-				<CardHeader>
-					<CardTitle className='text-3xl font-bold text-center'>
-						Contact Me
-					</CardTitle>
-					<CardDescription className='text-center text-lg'>
+				<CardHeader className='text-center'>
+					<CardTitle className='text-3xl font-bold'>Contact Me</CardTitle>
+					<CardDescription className='text-lg'>
 						Get in touch for collaborations
 					</CardDescription>
 				</CardHeader>
