@@ -15,7 +15,11 @@ const Footer = () => {
 					{links.map(link => (
 						<li key={link.name} className='flex items-center'>
 							<Button variant='link'>
-								<Link href={link.href} className='text-sm font-semibold'>
+								<Link
+									href={link.href}
+									className='text-sm font-semibold'
+									tabIndex={-1}
+								>
 									{link.name}
 								</Link>
 								<BsArrowLeft className='size-3 rotate-[135deg] text-foreground' />

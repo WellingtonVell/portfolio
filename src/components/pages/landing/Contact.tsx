@@ -17,46 +17,24 @@ const Contact = () => {
 					</CardDescription>
 				</CardHeader>
 				<CardContent className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4'>
-					<Button
-						variant='outline'
-						className='w-full sm:w-auto flex items-center justify-center space-x-2 hover:bg-primary transition-colors'
-						asChild
-					>
-						<Link href='mailto:wellingtonvell@gmail.com' aria-label='Email me'>
-							<SiGmail size={20} />
-							<span>Email</span>
-						</Link>
-					</Button>
-					<Button
-						variant='outline'
-						className='w-full sm:w-auto flex items-center justify-center space-x-2 hover:bg-[#0077B5] transition-colors'
-						asChild
-					>
-						<Link
-							href='https://www.linkedin.com/in/wellington-costavell'
-							target='_blank'
-							rel='noopener noreferrer'
-							aria-label='Visit my LinkedIn profile'
+					{socials.map(social => (
+						<Button
+							variant='outline'
+							className={`w-full sm:w-auto flex items-center justify-center space-x-2 ${social.className}`}
+							asChild
+							key={social.name}
 						>
-							<BsLinkedin size={20} />
-							<span>LinkedIn</span>
-						</Link>
-					</Button>
-					<Button
-						variant='outline'
-						className='w-full sm:w-auto flex items-center justify-center space-x-2 hover:bg-[#333] transition-colors hover:text-[#fff]'
-						asChild
-					>
-						<Link
-							href='https://github.com/WellingtonVell'
-							target='_blank'
-							rel='noopener noreferrer'
-							aria-label='Visit my GitHub profile'
-						>
-							<BsGithub size={20} />
-							<span>GitHub</span>
-						</Link>
-					</Button>
+							<Link
+								href={social.href}
+								target='_blank'
+								rel='noopener noreferrer'
+								aria-label={social.arialabel}
+							>
+								<social.icon size={20} />
+								<span>{social.name}</span>
+							</Link>
+						</Button>
+					))}
 				</CardContent>
 			</Card>
 		</section>
@@ -64,3 +42,27 @@ const Contact = () => {
 };
 
 export default Contact;
+
+const socials = [
+	{
+		name: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/wellington-costavell',
+		icon: BsLinkedin,
+		arialabel: 'Visit my LinkedIn profile',
+		className: 'hover:bg-[#0077B5]',
+	},
+	{
+		name: 'GitHub',
+		href: 'https://github.com/WellingtonVell',
+		icon: BsGithub,
+		arialabel: 'Visit my GitHub profile',
+		className: 'hover:bg-[#333] hover:text-[#fff]',
+	},
+	{
+		name: 'Email',
+		href: 'mailto:wellingtonvell@gmail.com',
+		icon: SiGmail,
+		arialabel: 'Send me an email',
+		className: 'hover:bg-primary',
+	},
+];
